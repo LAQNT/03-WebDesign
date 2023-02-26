@@ -487,19 +487,13 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
 
         // ---- extra 3 -----
 
-        let authors = document.querySelectorAll('.blog-post p a');
+        let authors = document.querySelectorAll('.blog-post .blog-post-meta a');
+        console.log(authors);
 
-        let alertAuthor = authors.addEventListener('onmouseover', alert(authors.innerText))
-        
-        for (author of authors) {
-            console.log(author.innerText);
-            alertAuthor;
-        }
-
-        
-        
-
-
+        authors.forEach( function (author) {
+            author.addEventListener('mouseover', () => alert(author.innerText));
+        })    
+       
     </script>
 </body>
 
